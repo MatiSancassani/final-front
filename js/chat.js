@@ -1,5 +1,5 @@
 // Conectar con el servidor de socket del backend en el puerto correcto
-const socket = io('http://localhost:8030');
+const socket = io('https://final-back-o0ty.onrender.com');
 
 // Elementos del DOM
 const chatBox = document.getElementById('chatBox');

@@ -1,4 +1,4 @@
-const API = 'http://localhost:8030/api/users';
+const API = 'https://final-back-o0ty.onrender.com/api/users';
 let userRegisters = [];
 document.addEventListener('DOMContentLoaded', async () => {
     const usuarios = document.querySelector('#usuarios');

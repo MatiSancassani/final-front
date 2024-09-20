@@ -1,4 +1,4 @@
-const API = 'http://localhost:8030/api/products';
+const API = 'https://final-back-o0ty.onrender.com/api/products';
 const createProduct = async () => {
     try {
 

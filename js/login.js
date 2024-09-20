@@ -8,7 +8,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    fetch('http://localhost:8030/api/auth/login', {
+    fetch('https://final-back-o0ty.onrender.com/api/auth/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -31,7 +31,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
                     if (cartId) {
                         localStorage.setItem('userEmail', email);
                         setTimeout(() => {
-                            window.location.href = 'http://127.0.0.1:5500/front/index.html'; // Redirigir a index.html después de 1 segundo
+                            window.location.href = 'https://final-front-mva2.onrender.com'; // Redirigir a index.html después de 1 segundo
                         }, 1000);
                     } else {
                         console.error('No se pudo obtener el cartId.');

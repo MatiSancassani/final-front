@@ -1,6 +1,6 @@
 const cartContainer = document.querySelector('#productsInCart');
 const cid = localStorage.getItem('cart_id')
-const APIWITHID = `http://localhost:8030/api/carts/${cid}`;
+const APIWITHID = `https://final-back-o0ty.onrender.com/api/carts/${cid}`;
 const totalCart = document.querySelector('#totalCart');
 let productsInCart = [];
 window.addEventListener('DOMContentLoaded', () => {
@@ -130,7 +130,7 @@ const obtainIdProduct = (productId) => {
 const updateProductQuantity = async (pid, newQuantity) => {
     try {
         const cid = localStorage.getItem('cart_id');
-        const API_URL = `http://localhost:8030/api/carts/${cid}/products/${pid}`;
+        const API_URL = `https://final-back-o0ty.onrender.com/api/carts/${cid}/products/${pid}`;
 
         const response = await fetch(API_URL, {
             method: 'PUT',

@@ -1,4 +1,4 @@
-const API = 'http://localhost:8030/api/users/profile';
+const API = 'https://final-back-o0ty.onrender.com/api/users/profile';
 
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
 
             try {
-                const uploadResponse = await fetch('http://localhost:8030/api/uploads/documents', {
+                const uploadResponse = await fetch('https://final-back-o0ty.onrender.com/api/uploads/documents', {
                     method: 'POST',
                     body: formData,
                     credentials: 'include'

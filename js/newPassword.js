@@ -1,4 +1,4 @@
-const API = 'http://localhost:8030/api/auth/resetPassword'
+const API = 'https://final-back-o0ty.onrender.com/api/auth/resetPassword'
 
 function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);

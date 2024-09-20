@@ -4,8 +4,8 @@ const detailProduct = document.querySelector('#detailProduct');
 
 
 
-const API = 'http://localhost:8030/api/products';
-const APIUSERS = 'http://localhost:8030/api/users';
+const API = 'https://final-back-o0ty.onrender.com/api/products';
+const APIUSERS = 'https://final-back-o0ty.onrender.com/api/users';
 
 let productsData = [];
 
@@ -90,7 +90,7 @@ const editProduct = (productId) => {
 
 const updateProduct = async () => {
     try {
-        const API2 = `http://localhost:8030/api/products/${document.querySelector('#edit-ID').value}`
+        const API2 = `https://final-back-o0ty.onrender.com/api/products/${document.querySelector('#edit-ID').value}`
         // Creo un nuevo producto asignandole los nuevos valores a las propiedades de la DB
         const productUpdated = {
             title: document.querySelector('#edit-title').value,
@@ -136,7 +136,7 @@ window.obtainIdProduct = obtainIdProduct;
 const deleteProduct = async () => {
     try {
         const pid = localStorage.getItem('ID')
-        const API2 = `http://localhost:8030/api/products/${pid}`
+        const API2 = `https://final-back-o0ty.onrender.com/api/products/${pid}`
 
         const response = await fetch(API2, {
             method: 'DELETE',
@@ -168,7 +168,7 @@ const addProductInCart = async (pid) => {
             console.log('Faltan datos: cid o pid no está definido');
             return;
         }
-        const APICART = `http://localhost:8030/api/carts/${cid}/product/${pid}`;
+        const APICART = `https://final-back-o0ty.onrender.com/api/carts/${cid}/product/${pid}`;
         const response = await fetch(APICART, {
             method: 'POST',
             headers: {
@@ -211,7 +211,7 @@ const updateCartCount = async () => {
             return;
         }
 
-        const APICART = `http://localhost:8030/api/carts/${cid}`;
+        const APICART = `https://final-back-o0ty.onrender.com/api/carts/${cid}`;
         const response = await fetch(APICART, {
             method: 'GET',
             headers: {
@@ -246,7 +246,7 @@ const closeSession = document.querySelector('#logout');
 
 const logout = async () => {
     try {
-        const response = await fetch('http://localhost:8030/api/auth/logout', {
+        const response = await fetch('https://final-back-o0ty.onrender.com/api/auth/logout', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -257,7 +257,7 @@ const logout = async () => {
         if (response.ok) {
             localStorage.clear();
             console.log('Session Cerrada')
-            window.location.href = 'http://127.0.0.1:5500/front/pages/login.html';
+            window.location.href = 'https://final-front-mva2.onrender.com/pages/login.html';
         }
     } catch (error) {
         console.log('Error al cerrar session', error)

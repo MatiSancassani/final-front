@@ -1,4 +1,4 @@
-const API = 'http://localhost:8030/api/auth/lostPassword'
+const API = 'https://final-back-o0ty.onrender.com/api/auth/lostPassword'
 
 document.addEventListener('DOMContentLoaded', function () {
 

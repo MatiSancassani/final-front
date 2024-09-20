@@ -1,4 +1,4 @@
-const API = 'http://localhost:8030/api/carts';
+const API = 'https://final-back-o0ty.onrender.com/api/carts';
 
 export const getCartId = async () => {
     try {
@@ -28,7 +28,7 @@ export const getCartId = async () => {
 
 const github = document.querySelector('#github')
 const loginWithGithub = () => {
-    window.location.href = 'http://localhost:8030/api/auth/github';
+    window.location.href = 'https://final-back-o0ty.onrender.com/api/auth/github';
     // getCartId();
 }
 

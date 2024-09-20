@@ -7,7 +7,7 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
         const password = document.getElementById('password').value;
         // const confirmPassword = document.getElementById('confirmPassword').value;
 
-        const response = await fetch('http://localhost:8030/api/auth/register', {
+        const response = await fetch('https://final-back-o0ty.onrender.com/api/auth/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
