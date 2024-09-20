@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: white;
+}
+
+h1 {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* CARD STYLES */
+
+.img-card {
+    width: 250px;
+    height: 200px;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.containerProducts {
+    margin: 2rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white;
+    margin: 7rem;
+    border-radius: 5rem;
+
+}
+
+.card-container {
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 2rem;
+    padding: 2rem;
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.title-card {
+    font-size: 1.5rem;
+}
+
+.desc-card {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.button-card {
+    border: none;
+    margin-top: 1rem;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    border: 1px solid white;
+    border-radius: 1.5rem;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.button-card:hover {
+    background-color: #0A0E14;
+    border: 1px solid white;
+    color: white;
+    transform: translateY(5px);
+    transition: .3s;
+}
+
+/* MODAL STYLES */
+
+.modal-content {
+    border-radius: 2rem;
+    background-color: rgb(49, 49, 49);
+}
+
+.modal-body {
+
+    padding: 5rem;
+}
+
+.footer-modal {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.buttonAdd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.buttonEdit {
+    color: white;
+    font-size: 1.5rem;
+    padding: 0;
+}
+
+.buttonRemove {
+    color: rgb(199, 65, 65);
+    font-size: 1.5rem;
+}
+
+.buttonEdit:hover {
+    color: aquamarine;
+}
+
+.buttonRemove:hover {
+    color: white;
+}
+
+.form-format {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.actionMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttonClose {
+    color: white;
+}
+
+/* HEADER STYLES */
+
+.menuHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuHeader a {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+.itemMenu {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+
+}

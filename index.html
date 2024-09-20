@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Ecommerce</title>
+</head>
+
+<body>
+    <header>
+        <div class="menuHeader">
+            <ul class="itemMenu">
+                <a href="">
+                    <li>Inicio</li>
+                </a>
+                <a href="./pages/contacto.html">
+                    <li>Contacto</li>
+                </a>
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Profile
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./pages/addproduct.html">Add Product</a></li>
+                        <li><a class="dropdown-item" href="./pages/role.html">Users</a></li>
+                        <li><a class="dropdown-item" href="./pages/profile.html">Settings</a></li>
+                    </ul>
+                </div>
+                <a href="#" id="logout">
+                    <li>Salir</li>
+                </a>
+                <div>
+                    <div>
+                        <a href="./pages/cart.html">
+                            <li><i class="bi bi-cart2"></i></li>
+                            <small id="numCart"></small>
+                        </a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </header>
+    <h1>Welcome to my Ecommerce</h1>
+
+    <!-- MENU Y MODAL DE BOTON EDIT Y REMOVE -->
+    <!-- Editar producto modal -->
+    <div class="modal fade" id="exampleModa2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Update product</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body body-modal">
+                    <div class="form-modal">
+                        <form id="product-form">
+                            <input type="hidden" id="edit-ID">
+                            <div class="form-format">
+                                <label for="edit-title">Title</label>
+                                <input type="text" name="edit-title" id="edit-title" placeholder="Ingrese title">
+                            </div>
+                            <div class="form-format">
+                                <label for="edit-description">Description</label>
+                                <input type="text" name="edit-description" id="edit-description"
+                                    placeholder="Ingrese description">
+                            </div>
+                            <div class="form-format">
+                                <label for="edit-price">Price:</label>
+                                <input type="number" name="edit-price" id="edit-price" placeholder="Ingrese price">
+                            </div>
+                            <div class="form-format">
+                                <label for="edit-stock">Stock:</label>
+                                <input type="number" name="edit-stock" id="edit-stock" placeholder="Ingrese stock">
+                            </div>
+                            <div class="form-format">
+                                <label for="edit-category">Category</label>
+                                <input type="text" name="edit-category" id="edit-category"
+                                    placeholder="Ingrese Category">
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="footer-modal">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" id="confirmEditButton" class="btn btn-success"
+                            data-bs-dismiss="modal">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Eliminar producto modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Remove Product</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h3>Are you about to permanently eliminate this product, do you want to continue?</h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" id="confirmDeleteButton" class="btn btn-danger"
+                        data-bs-dismiss="modal">Confirm and remove
+                        product</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="containerProducts" id="productsContainer">
+        <!-- Se cargara con javascript -->
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
