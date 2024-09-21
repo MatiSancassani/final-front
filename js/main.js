@@ -15,6 +15,18 @@ window.addEventListener('DOMContentLoaded', () => {
     getProducts();
 })
 
+
+const saveCartIdFromUrl = () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const cartId = urlParams.get('cart_id');
+    if (cartId) {
+        localStorage.setItem('cart_id', cartId);
+        console.log('Cart ID guardado en localStorage:', cartId);
+    } else {
+        console.log('No se encontró el parámetro cart_id en la URL.');
+    }
+};
+
 // OBTENER LISTA DE PRODUCTOS CON METODO GET
 const getProducts = async () => {
     try {
@@ -239,7 +251,10 @@ const updateCartCount = async () => {
         console.log('Error al actualizar el contador del carrito:', error);
     }
 };
-updateCartCount();
+document.addEventListener('DOMContentLoaded', () => {
+    saveCartIdFromUrl();  // Asegurarse de guardar el cart_id primero
+    updateCartCount();    // Luego actualizar el contador del carrito
+});
 
 // LOGOUT
 const closeSession = document.querySelector('#logout');
