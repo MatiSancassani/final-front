@@ -31,7 +31,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
                     if (cartId) {
                         localStorage.setItem('userEmail', email);
                         setTimeout(() => {
-                            window.location.href = 'https://final-front-mva2.onrender.com'; // Redirigir a index.html después de 1 segundo
+                            window.location.href = 'https://final-front-mva2.onrender.com/pages/products.html'; // Redirigir a index.html después de 1 segundo
                         }, 1000);
                     } else {
                         console.error('No se pudo obtener el cartId.');

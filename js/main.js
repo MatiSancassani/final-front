@@ -257,7 +257,7 @@ const logout = async () => {
         if (response.ok) {
             localStorage.clear();
             console.log('Session Cerrada')
-            window.location.href = 'https://final-front-mva2.onrender.com/pages/login.html';
+            window.location.href = 'https://final-front-mva2.onrender.com';
         }
     } catch (error) {
         console.log('Error al cerrar session', error)
