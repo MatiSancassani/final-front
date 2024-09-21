@@ -18,9 +18,12 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
 
         if (data.status !== "success") {
             console.log('Error en registro:', data.error || 'Unknown error');
+
         } else {
             console.log('Registro exitoso', data);
-            // Redirige o haz algo más tras el éxito
+            setTimeout(() => {
+                window.location.href = 'https://final-front-mva2.onrender.com/'; // Redirigir a index.html después de 1 segundo
+            }, 1000);
         }
     } catch (error) {
         console.log(error)
