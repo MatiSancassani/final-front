@@ -25,11 +25,3 @@ export const getCartId = async () => {
         return null;
     }
 }
-
-const github = document.querySelector('#github')
-const loginWithGithub = () => {
-    window.location.href = 'https://final-back-o0ty.onrender.com/api/auth/github';
-    // getCartId();
-}
-
-github.addEventListener('click', loginWithGithub)
