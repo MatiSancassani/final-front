@@ -21,9 +21,7 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
 
         } else {
             console.log('Registro exitoso', data);
-            setTimeout(() => {
-                window.location.href = 'https://final-front-mva2.onrender.com/'; // Redirigir a index.html después de 1 segundo
-            }, 1000);
+            window.location.href = 'https://final-front-mva2.onrender.com/';
         }
     } catch (error) {
         console.log(error)
