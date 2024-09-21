@@ -15,8 +15,12 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
             body: JSON.stringify({ name, lastName, email, password })
         });
         const data = await response.json();
-        if (!data.ok) {
-            console.log('error en register')
+
+        if (data.status !== "success") {
+            console.log('Error en registro:', data.error || 'Unknown error');
+        } else {
+            console.log('Registro exitoso', data);
+            // Redirige o haz algo más tras el éxito
         }
     } catch (error) {
         console.log(error)
