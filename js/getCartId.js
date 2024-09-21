@@ -26,14 +26,14 @@ export const getCartId = async () => {
     }
 }
 
-// Función para obtener los parámetros de la URL
-function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
-}
+// 1. Obtener la URL actual
+const currentUrl = window.location.href;
 
-// Obtener el cart_id de los parámetros de la URL
-const cartId = getQueryParam('cart_id');
+// 2. Crear un objeto URLSearchParams con los parámetros de la URL
+const urlParams = new URLSearchParams(window.location.search);
+
+// 3. Extraer el valor de 'cart_id'
+const cartId = urlParams.get('cart_id');
 
 // Si existe el cart_id, guárdalo en el localStorage
 if (cartId) {
