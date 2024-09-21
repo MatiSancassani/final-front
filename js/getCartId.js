@@ -25,3 +25,22 @@ export const getCartId = async () => {
         return null;
     }
 }
+
+// Función para obtener los parámetros de la URL
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
+// Obtener el cart_id de los parámetros de la URL
+const cartId = getQueryParam('cart_id');
+
+// Si existe el cart_id, guárdalo en el localStorage
+if (cartId) {
+    localStorage.setItem('cart_id', cartId);
+    console.log(`cart_id guardado en localStorage: ${cartId}`);
+}
+
+document.getElementById('github').addEventListener('click', function () {
+    window.location.href = 'https://final-back-o0ty.onrender.com/api/auth/github';
+});
