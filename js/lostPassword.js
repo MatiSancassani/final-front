@@ -15,11 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         const messageElement = document.getElementById('message');
-        if (response.ok) {
-            messageElement.textContent = 'Check your email';
-        } else {
-            messageElement.textContent = error;
-        }
+        if (response.ok)
+            alert('Check Your email')
+
     });
 
 });
